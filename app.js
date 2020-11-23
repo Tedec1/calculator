@@ -88,25 +88,30 @@ $('.clear-all').click(()=>{
     updateAll();
 })
 
+
 $('.equals').click(()=>{
     if ($('.next-operation').hasClass('mul')){
         running *= stored;
         stored = null;
+        shown = '';
         clearOp();
         updateAll();
     }else if ($('.next-operation').hasClass('div')){
         running /= stored;
         stored = null;
+        shown = '';
         clearOp();
         updateAll();
     } else if ($('.next-operation').hasClass('add')){
         running += stored;
         stored = null;
+        shown = '';
         clearOp();
         updateAll();
     }else if ($('.next-operation').hasClass('sub')){
         running -= stored;
         stored = null;
+        shown = '';
         clearOp();
         updateAll();
     }
