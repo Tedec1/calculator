@@ -1,5 +1,5 @@
 let stored = null;
-let running = 0;
+let running = null;
 let shown = '';
 let memory = null;
 let mem = {
@@ -58,7 +58,7 @@ $('.digits button').click(function onClick(){
         } else {
             shown += $(this).text();
         }
-        stored = parseInt(shown);
+        stored = Number(shown);
         updateShown()
     }
 })
